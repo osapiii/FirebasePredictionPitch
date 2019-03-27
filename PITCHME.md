@@ -1,129 +1,161 @@
----?image=assets/cover.jpg&size=cover
+---?image=assets/cover.png
 
-## Firebase Predictionで始める1歩先を読むグロース戦略
-### by Voicy
-
+## Firebase Predictionsで始める
+## 1歩先を読むグロース戦略
+<br>
+@koyamauchi
+<br>
+<br>
 2019.03.28
-<br> 
+<br>
 Firebase Meetup #12 Growth Day
 
-[@koyamauchi](https://github.com/koyamauchi)
+---?image=assets/cover.png
+#### 本日のお題目
 
----
-
-## 本日のお題目
-
-1. Voicyの紹介
-2. 私が考えるグロースへの取り組み方
+1. @color[black](Voicyの紹介)
+2. アプリグロースハックをシンプルに考える
 3. FirebasePredictionってどんなサービス?
 4. FPを使い始める準備をしよう！
 5. バンバン活用しようぜ！
 6. まとめ
 
-+++
-## 自己紹介
-- 小山内
-- Voicy
-- データストラテジスト
-- データに関連する事は何でもやってます。元マーケ。
-
++++?image=assets/introduce_fin.png
++++?image=assets/introduce_2.png
 ---
-# [Voicyの紹介](https://gitpitch.com/)
+### Voicyの紹介
 (1/6)
 
++++?image=assets/voicy_introduction_2.png
++++?image=assets/introduction.png
+@snap[north-west]
 +++
-## こんなサービスです!
-![](assets/voicy_service.png)
+@snap[north-west]
+#### Voicyのデータ環境
+@size[0.6em](toCアプリのログは、サーバーログとFirebaseAnalyticsを併用して使用)
+<br>
+@size[0.6em](音声聴取ログとアプリ内でのアクションログの2つをまとめてBigQueryに投入)
+<br>
+![](assets/data_architecture.png)
+@snapend
+
 +++
-## エンジニアチームはこんな構成です！
-![](assets/voicy_service.png)
-+++
-## サービス作り直してます！
-![](assets/tech_blog.png)
----
-# 私が考えるグロースへの取り組み方
+#### Voicy と Firebase
+@size[0.6em](必要に応じて、いくつかのサービスを使用しています)
+![](assets/voicy_introduction_3.png)
+---?image=assets/cover.png
+
+### アプリのグロースについて考えてみる
 (2/6)
 
 +++
-## リテンションカーブの起点を上げるか? 減少を食い止めるか?のどちらかしかない
-
+#### @size[0.8em](継続率が何よりも重要だというのはよくある話...)
+![](assets/aarrr.png) 
+<br>
+@size[0.5em](まずはサービスを使い続けてくれる土台作りがダイジ)
 +++
-## 特に、C向けはユーザーニーズが多様なだけに、きめ細かい体験設計が求められる
-
+#### @size[0.8em](加えて、1度離脱したユーザーはもう戻ってこない現実...)
+![](assets/sample.png) 
+<br>
+@size[0.5em](分析->ソリューション実行の段階で既にユーザーいなくなってる問題)
 +++
-## USの方が進んでる。過去の結果を分析-->改善する流れから、詳細の行動を予測-->先回りして対処するのがナウいやり方
-- Amptitude
-- Leanplume ...etc
-
----
-# そうだ、FirebasePredictionを使ってみよう
----
-# FirebasePredictionの役回り
+#### @size[0.8em](行動予測をビジネスに取り込んでいる企業は結構ある)
+![](assets/sample.png) 
+<br>
+@size[0.5em](Amptitude/Leanplume...etc Prediction)
++++
+#### 予測での体験向上を手軽にアプリに取り入れるなら、Firebase Predictionsがオススメ💡
+---?image=assets/cover.png
+### Predictionsって何?
 (3/6)
 +++
-## ざっくり言うと、
-- Analyticsのイベントを元に学習して、"ある特定のAnalyticsイベントの発生確率を予測する"
-- それによって、施策の精度を上げる事ができる
-+++
-## ラーメン屋の例... (Day1)
-- あなたはラーメン屋を経営しています。ある1人のお客さんが来週もお店に来てくれるか?予測したいとします。
-- 友人のとっても賢いデータサイエンティストが、"過去28日の行動データからすると、お客さんAは65%の確率で来週もお店に来るよ!"と教えてくれました。
-+++
-## ラーメン屋の例... (Day2)
-- さらに、"25%の確率でチャーシュー麺を注文するよ!"という事も教えてくれました。"マジかよ何でも教えてくれるじゃん！"と店主は喜び、新メニュー開発することにしました。
-- めでたしめでたしとな...
-+++
-### こんなお友達がいたら良いのになあ....
-#### ---> Predictionの出番です
-![](https://i.gyazo.com/0448a460451b6cc0c9cf13e4961c0d3f.png)
+##### @size[0.7em](まずは公式の紹介動画が分かりやすいので見てみましょう！)
+![Video](https://www.youtube.com/embed/ORrvrVEHJz4)
 
 +++
-## Analyticsを初めとして各種プロダクトの分析/施策精度を上げる"潤滑油"的な役割。使ってあげて〜
+@snap[midpoint span-100]
+#### ざっくり言うと、、 
+@size[0.7em](アプリ利用者の翌7日間における、特定イベントの発生予測を行うモデルで学習を行い、各Firebaseプロダクトで利用可能なセグメントを生成)
+@snapend
 
++++?image=assets/voicy_case.png
++++?image=assets/ec_app.png
++++?image=assets/game_app.png
++++?image=assets/architecture_1.png
+@snap[north-west]
+#### @size[0.8em](Predictionsの位置付け)
+@snapend
 +++
-## 実際はCV単価が高いサービス / 利用頻度が高いサービスに向いているかな?という印象です
-
-+++
-## 参考になりそうなリソース
-- Googleの公式動画
-- Qittaの記事(私が書きましたw)
-+++
-## 自社でデータサイエンスチームが存在して、ゴリゴリにモデルをチューニングできる会社も要らないかも。でも、SaaS的に安定稼働&無料で予測してくれるので、精度を確かめるのは良いかも。
-- 
----
-# Firebase Predictionを使い始めるまで...
+#### いよいよ準備完了！
+---?image=assets/cover.png
+### Predictionsを使い始めるまでの準備
 (4/6)
-- いくつか注意点があります
-
++++?image=assets/architecture_2.png
 +++
-## ①何はともあれアクティベートしよう(リスク事項はほとんどないぞ)
-- FirebaseAnalyticsを使用していないと、使えない。まだ、使った事ないぜ！という人がもしいたら、是非導入を！※後述するように、setUserIDも他ツールと連携するなら忘れずに....
+#### ①何はともあれアクティベート!
+@size[0.6em](MAU5,000以上 かつ Firebase Analyticsで計測中! 無償!)
+![](assets/activate.png) 
 +++
-## ②仕組みを理解する(偉い人に説明できるようにしよう)
-### 時間があるので、じっくり紹介するぞ！
-### 仕組みをブラックボックスにせずにきっちりと理解する
-- リスクへの考え方、FA / TPなどのマトリックスの理解、予測に使用された変数。
-- ユーザー体験に直結する部分になるので、仕組みはしっかりと理解し、デメリットも把握した上で、使用する事が重要
-- 内容についても詳細に説明する
- - eventログを主な学習データとして、2クラス分類の機械学習モデルが走る。過去の28日間のデータを元にしたクロスバリデーションが走る。
- - めっちゃ簡単に説明すると、毎日過去28日間の行動を起点にして計算を実行する
+#### ②仕組みを理解する
+@size[0.6em](ブラックボックスを排除して、正しく用法と用量を守る)
+![](assets/understand.png) 
 +++
-## ③予測の種類を追加する(アナリティクスのCVしか設定できない)
-- コンバージョンの上限は10個 / 予測の上限もある。課金やレベルアップ、友達招待など、ビジネスインパクトの大きい指標を予測対象とするのが吉
----
-# めっちゃ活用しようぜ！
+@snap[north-west]
+#### 大事なポイント1: 
+@size[0.7em](Predictionsは、翌7日間のイベント発生確率を予測する)
+@snapend
+<br>
+<br>
+![](assets/Remote_Config_3.png) 
++++
+@snap[north-west]
+#### 大事なポイント2: 
+@size[0.7em](施策に応じて、最適なリスク許容度を選択することができる)
+@snapend
+<br>
+<br>
+![](assets/risk_low.png) 
++++
+@snap[north-west]
+#### 大事なポイント3: 
+@size[0.7em](予測精度が低い時は、自動でオーディエンス解除される)
+@snapend
+<br>
+<br>
+![](assets/Remote_Config.png)
++++
+@snap[north span-100]
+#### ③その他済ましておきたい下準備いくつか
+![](assets/prepare.png)
++++?image=assets/pre_download.png
++++
+#### 準備完了!
+---?image=assets/cover.png
+### いざアクション！🔥
 (5/6)
-+++
-## ログと紐付けて分析しようぜ!(BigQueryへのエクスポート&setUserIDを忘れずに....)
-- UserIDを紐づける事で、Analyticsと結びつけて分析が可能になる。サービス全体の改善に生かす、BigQuery活用術 (by Voicy)
-- 自社データと紐付けたい場合は、BigQueryから転送するのが良いでしょう。UserIDをkeyにすれば、様々なデータと繋がるよ。
++++?image=assets/architecture_4.png
++++?image=assets/cloud_ab.png
++++?image=assets/in_app_messaging.png
++++?image=assets/cloud_messaging_2.png
++++?image=assets/architecture_3.png
++++?image=assets/database.png
+@snap[north span-100]
+##### @size[0.8em]("ログ"x"予測"の掛け合わせで、踏み込んだ分析が可能！)
+@snapend
+---?image=assets/cover.png
+### 最後にまとめ
+(6/6)
 
 +++
-## 施策をバンバン打っていこうぜ!(分析とエンゲージメントアップ)
-- 具体的な出し先をスクショ交えて投げる / 予測RemoteConfigの切り替えタイミングだけイマイチ分からんので調べる。
-- 全員に常に付与されている感じだけど、ユーザープロパティ?RemoteConfig
+@snap[midpoint span-100]
+@ol
+- @size[1.1em](準備が大変だけど、色々と応用先)
+<br>
+- @size[1.1em](準備が大変だけど、色々と応用先)
+<br>
+- @size[1.1em](準備が大変だけど、色々と応用先)
+@olend
+@snapend
 ---
-## まとめ
-(6/6)
-- 準備が大変だけど、色々と応用先がある
-- in App Messageって動く?教えて！
+##### @size[0.8em](Voicyでは、共に音声の未来を作る仲間を募集しています！)
+![](assets/sample.png) 

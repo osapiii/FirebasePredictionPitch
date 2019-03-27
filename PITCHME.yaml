@@ -1,5 +1,5 @@
-background: bg/navy.png
 transition: slide
-theme: black
-footnote: "© 2017 YourName All Rights Reserved."
+theme: white
+layout: center
+footnote: "© 2019 Voicy.inc Rights Reserved."
 theme-override: assets/PITCHME.css
