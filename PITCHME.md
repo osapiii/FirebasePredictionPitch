@@ -14,19 +14,31 @@ Firebase Meetup #12 Growth Day
 #### 本日のお題目
 
 1. @color[black](Voicyの紹介)
-2. アプリグロースハックをシンプルに考える
-3. FirebasePredictionってどんなサービス?
-4. FPを使い始める準備をしよう！
-5. バンバン活用しようぜ！
-6. まとめ
+2. アプリのグロースについて考えてみる
+3. Predictionって何?
+4. 使い始める準備をしよう！
+5. いざアクション！
+6. 最後にまとめ
 
 +++?image=assets/introduce_fin.png
 +++?image=assets/introduce_2.png
----
++++
+@snap[midpoint span-100]
+#### @size[0.8em](今日の発表で得られるもの)
+@ol
+- @size[1.1em](Predicionsの仕組みが分かる)
+<br>
+- @size[1.1em](使い始めるまでに必要な準備 / 活用方法が分かる)
+<br>
+- @size[1.1em](明日から使ってみたくなる(多分))
+@olend
+@snapend
+---?image=assets/cover.png
+
 ### Voicyの紹介
 (1/6)
 
-+++?image=assets/voicy_introduction_2.png
++++?image=assets/vision_2.png
 +++?image=assets/introduction.png
 @snap[north-west]
 +++
@@ -54,28 +66,32 @@ Firebase Meetup #12 Growth Day
 <br>
 @size[0.5em](まずはサービスを使い続けてくれる土台作りがダイジ)
 +++
-#### @size[0.8em](加えて、1度離脱したユーザーはもう戻ってこない現実...)
-![](assets/sample.png) 
+@snap[north-west]
+#### @size[0.8em](従来の分析と予測型の分析)
+@ul
+- @size[1.0em](これまで:)
+- @size[0.8em](過去の行動を分析して、未来のユーザーにアクションを実行)
+- @size[0.8em](-> 離脱してしまったユーザーにアプローチできない & 施策が新規のユーザーに適用可能かは未知数)
 <br>
-@size[0.5em](分析->ソリューション実行の段階で既にユーザーいなくなってる問題)
-+++
-#### @size[0.8em](行動予測をビジネスに取り込んでいる企業は結構ある)
-![](assets/sample.png) 
-<br>
-@size[0.5em](Amptitude/Leanplume...etc Prediction)
+- @size[1.0em](これから:)
+- @size[0.8em](今のユーザーの行動を予測して、そのユーザーにアクションを実行)
+- @size[0.8em](-> そもそも離脱自体を防ぐ & コンテキストを捉えた施策が打てる)
+@ulend
+@snapend
++++?image=assets/prediction_case.png
 +++
 #### 予測での体験向上を手軽にアプリに取り入れるなら、Firebase Predictionsがオススメ💡
 ---?image=assets/cover.png
 ### Predictionsって何?
 (3/6)
 +++
-##### @size[0.7em](まずは公式の紹介動画が分かりやすいので見てみましょう！)
+##### @size[0.7em](まずは公式の紹介動画が分かりやすいので見てみる！)
 ![Video](https://www.youtube.com/embed/ORrvrVEHJz4)
 
 +++
 @snap[midpoint span-100]
 #### ざっくり言うと、、 
-@size[0.7em](アプリ利用者の翌7日間における、特定イベントの発生予測を行うモデルで学習を行い、各Firebaseプロダクトで利用可能なセグメントを生成)
+@size[0.7em](アプリ利用者の翌7日間における、特定イベントの発生予測を行うモデルを作成し、各Firebaseプロダクトで利用可能なセグメントを生成する)
 @snapend
 
 +++?image=assets/voicy_case.png
@@ -88,12 +104,12 @@ Firebase Meetup #12 Growth Day
 +++
 #### いよいよ準備完了！
 ---?image=assets/cover.png
-### Predictionsを使い始めるまでの準備
+### 使い始める準備をしよう
 (4/6)
 +++?image=assets/architecture_2.png
 +++
 #### ①何はともあれアクティベート!
-@size[0.6em](MAU5,000以上 かつ Firebase Analyticsで計測中! 無償!)
+@size[0.6em](MAU10,000以上 かつ Firebase Analyticsで計測中!無償!)
 ![](assets/activate.png) 
 +++
 #### ②仕組みを理解する
@@ -142,6 +158,7 @@ Firebase Meetup #12 Growth Day
 @snap[north span-100]
 ##### @size[0.8em]("ログ"x"予測"の掛け合わせで、踏み込んだ分析が可能！)
 @snapend
++++?image=assets/signal.png
 ---?image=assets/cover.png
 ### 最後にまとめ
 (6/6)
@@ -149,13 +166,14 @@ Firebase Meetup #12 Growth Day
 +++
 @snap[midpoint span-100]
 @ol
-- @size[1.1em](準備が大変だけど、色々と応用先)
+- @size[1.1em](予測をアプリに手軽に取り入れるならおすすめ！)
 <br>
-- @size[1.1em](準備が大変だけど、色々と応用先)
+- @size[1.1em](学習の仕組みと、応用方法を把握すれば、リスク管理しつつガシガシ使っていける)
 <br>
-- @size[1.1em](準備が大変だけど、色々と応用先)
+- @size[1.1em](今後の取り組みもガシガシ発表していきます！)
 @olend
 @snapend
----
-##### @size[0.8em](Voicyでは、共に音声の未来を作る仲間を募集しています！)
-![](assets/sample.png) 
+---?image=assets/techblog.png
+@snap[north span-100]
+##### @size[0.8em](続報はこちらにて！)
+@snapend
