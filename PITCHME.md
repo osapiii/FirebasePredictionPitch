@@ -21,6 +21,7 @@ Firebase Meetup #12 Growth Day
 6. 最後にまとめ
 
 +++?image=assets/introduce_fin.png
++++?image=assets/article.png
 +++?image=assets/introduce_2.png
 +++
 @snap[midpoint span-100]
@@ -39,6 +40,7 @@ Firebase Meetup #12 Growth Day
 (1/6)
 
 +++?image=assets/vision_2.png
++++?image=assets/Vision_1.png
 +++?image=assets/introduction.png
 @snap[north-west]
 +++
@@ -130,9 +132,18 @@ Firebase Meetup #12 Growth Day
 @snapend
 <br>
 <br>
-![](assets/risk_low.png) 
+![](assets/risk_high.png) 
++++?image=assets/beki.png
 +++
 @snap[north-west]
+#### 大事なポイント2: 
+@size[0.7em](施策に応じて、最適なリスク許容度を選択することができる)
+@snapend
+<br>
+<br>
+![](assets/risk_low.png) 
+@snap[north-west]
++++
 #### 大事なポイント3: 
 @size[0.7em](予測精度が低い時は、自動でオーディエンス解除される)
 @snapend
